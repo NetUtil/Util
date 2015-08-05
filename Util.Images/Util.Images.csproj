@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2E4DC082-B8F3-4CC1-B4B1-4F8A3A88B597}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Util.Images</RootNamespace>
+    <AssemblyName>Util.Images</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\..\..\Release\Util.Images.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\..\..\Release\Util.Images.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\..\..\Snk\Util.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Image.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="00-Source\BoxEdges.cs" />
+    <Compile Include="00-Source\Caching\ICache.cs" />
+    <Compile Include="00-Source\Caching\ICacheProvider.cs" />
+    <Compile Include="00-Source\Caching\IResponseArgs.cs" />
+    <Compile Include="00-Source\Caching\IResponseHeaders.cs" />
+    <Compile Include="00-Source\Caching\ResponseArgs.cs" />
+    <Compile Include="00-Source\Caching\ResponseHeaders.cs" />
+    <Compile Include="00-Source\Collections\QuerystringBase.cs" />
+    <Compile Include="00-Source\Collections\ReadOnlyDictionary.cs" />
+    <Compile Include="00-Source\Collections\ReverseEnumerator.cs" />
+    <Compile Include="00-Source\Collections\SafeList.cs" />
+    <Compile Include="00-Source\Configuration\CacheSelectionEventArgs.cs" />
+    <Compile Include="00-Source\Configuration\Config.cs" />
+    <Compile Include="00-Source\Configuration\ICacheSelectionEventArgs.cs" />
+    <Compile Include="00-Source\Configuration\ImageResizer.ResizerSection.cs" />
+    <Compile Include="00-Source\Configuration\IPipelineConfig.cs" />
+    <Compile Include="00-Source\Configuration\Issues\ConfigChecker.cs" />
+    <Compile Include="00-Source\Configuration\Issues\IIssue.cs" />
+    <Compile Include="00-Source\Configuration\Issues\IIssueProvider.cs" />
+    <Compile Include="00-Source\Configuration\Issues\IIssueReceiver.cs" />
+    <Compile Include="00-Source\Configuration\Issues\Issue.cs" />
+    <Compile Include="00-Source\Configuration\Issues\IssueGatherer.cs" />
+    <Compile Include="00-Source\Configuration\Issues\IssueSeverity.cs" />
+    <Compile Include="00-Source\Configuration\Issues\IssueSink.cs" />
+    <Compile Include="00-Source\Configuration\IUrlAuthorizationEventArgs.cs" />
+    <Compile Include="00-Source\Configuration\IUrlEventArgs.cs" />
+    <Compile Include="00-Source\Configuration\Logging\ILogger.cs" />
+    <Compile Include="00-Source\Configuration\Logging\ILoggerProvider.cs" />
+    <Compile Include="00-Source\Configuration\Logging\ILogManager.cs" />
+    <Compile Include="00-Source\Configuration\NativeDependencyManager.cs" />
+    <Compile Include="00-Source\Configuration\PipelineConfig.cs" />
+    <Compile Include="00-Source\Configuration\PluginConfig.cs" />
+    <Compile Include="00-Source\Configuration\UrlAuthorizationEventArgs.cs" />
+    <Compile Include="00-Source\Configuration\UrlEventArgs.cs" />
+    <Compile Include="00-Source\Configuration\Xml\Node.cs" />
+    <Compile Include="00-Source\Configuration\Xml\Selector.cs" />
+    <Compile Include="00-Source\Encoding\IEncoder.cs" />
+    <Compile Include="00-Source\Encoding\IEncoderProvider.cs" />
+    <Compile Include="00-Source\Enumerations.cs" />
+    <Compile Include="00-Source\ExtensionMethods\Enum.cs" />
+    <Compile Include="00-Source\ExtensionMethods\NameValueCollection.cs" />
+    <Compile Include="00-Source\ExtensionMethods\Stream.cs" />
+    <Compile Include="00-Source\ImageBuilder.cs" />
+    <Compile Include="00-Source\ImageJob.cs" />
+    <Compile Include="00-Source\ImageProcessingException.cs" />
+    <Compile Include="00-Source\Instructions.cs" />
+    <Compile Include="00-Source\InterceptModule.cs" />
+    <Compile Include="00-Source\Plugins\Basic\AutoRotate.cs" />
+    <Compile Include="00-Source\Plugins\Basic\ClientCache.cs" />
+    <Compile Include="00-Source\Plugins\Basic\DefaultEncoder.cs" />
+    <Compile Include="00-Source\Plugins\Basic\DefaultSettings.cs" />
+    <Compile Include="00-Source\Plugins\Basic\Diagnostic.cs" />
+    <Compile Include="00-Source\Plugins\Basic\DiagnosticDisabledHandler.cs" />
+    <Compile Include="00-Source\Plugins\Basic\DiagnosticPageHandler.cs" />
+    <Compile Include="00-Source\Plugins\Basic\DropShadow.cs" />
+    <Compile Include="00-Source\Plugins\Basic\FolderResizeSyntax.cs" />
+    <Compile Include="00-Source\Plugins\Basic\Gradient.cs" />
+    <Compile Include="00-Source\Plugins\Basic\IEPngFix.cs" />
+    <Compile Include="00-Source\Plugins\Basic\Image404.cs" />
+    <Compile Include="00-Source\Plugins\Basic\ImageHandlerSyntax.cs" />
+    <Compile Include="00-Source\Plugins\Basic\ImageInfoAPI.cs" />
+    <Compile Include="00-Source\Plugins\Basic\NoCache.cs" />
+    <Compile Include="00-Source\Plugins\Basic\NoCacheHandler.cs" />
+    <Compile Include="00-Source\Plugins\Basic\Presets.cs" />
+    <Compile Include="00-Source\Plugins\Basic\SizeLimiting.cs" />
+    <Compile Include="00-Source\Plugins\Basic\SizeLimits.cs" />
+    <Compile Include="00-Source\Plugins\Basic\SpeedOrQuality.cs" />
+    <Compile Include="00-Source\Plugins\Basic\Trial.cs" />
+    <Compile Include="00-Source\Plugins\Basic\VirtualFolder.cs" />
+    <Compile Include="00-Source\Plugins\FileSignature.cs" />
+    <Compile Include="00-Source\Plugins\ICurrentConfigProvider.cs" />
+    <Compile Include="00-Source\Plugins\IFileExtensionPlugin.cs" />
+    <Compile Include="00-Source\Plugins\IFileSignatureProvider.cs" />
+    <Compile Include="00-Source\Plugins\ILicenseService.cs" />
+    <Compile Include="00-Source\Plugins\ILicenseStore.cs" />
+    <Compile Include="00-Source\Plugins\IMultiInstancePlugin.cs" />
+    <Compile Include="00-Source\Plugins\IPlugin.cs" />
+    <Compile Include="00-Source\Plugins\IQuerystringPlugin.cs" />
+    <Compile Include="00-Source\Plugins\IRedactDiagnostics.cs" />
+    <Compile Include="00-Source\Plugins\ISettingsModifier.cs" />
+    <Compile Include="00-Source\Plugins\IVirtualBitmapFile.cs" />
+    <Compile Include="00-Source\Plugins\IVirtualFile.cs" />
+    <Compile Include="00-Source\Plugins\IVirtualFileCache.cs" />
+    <Compile Include="00-Source\Plugins\IVirtualFileSourceCacheKey.cs" />
+    <Compile Include="00-Source\Plugins\IVirtualFileWithModifiedDate.cs" />
+    <Compile Include="00-Source\Plugins\IVirtualImageProvider.cs" />
+    <Compile Include="00-Source\Plugins\VirtualFileWrapper.cs" />
+    <Compile Include="00-Source\ResizeSettings.cs" />
+    <Compile Include="00-Source\Resizing\AbstractImageProcessor.cs" />
+    <Compile Include="00-Source\Resizing\BitmapTag.cs" />
+    <Compile Include="00-Source\Resizing\BoxPadding.cs" />
+    <Compile Include="00-Source\Resizing\BuilderExtension.cs" />
+    <Compile Include="00-Source\Resizing\ImageState.cs" />
+    <Compile Include="00-Source\Resizing\LayoutBuilder.cs" />
+    <Compile Include="00-Source\Util\AssemblyAttributes.cs" />
+    <Compile Include="00-Source\Util\DictionaryUtils.cs" />
+    <Compile Include="00-Source\Util\ParseUtils.cs" />
+    <Compile Include="00-Source\Util\PathUtils.cs" />
+    <Compile Include="00-Source\Util\PolygonMath.cs" />
+    <Compile Include="00-Source\Util\SeekableStreamWrapper.cs" />
+    <Compile Include="00-Source\Util\StreamUtils.cs" />
+    <Compile Include="00-Source\Util\UrlHasher.cs" />
+    <Compile Include="00-Source\Util\Utils.cs" />
+    <Compile Include="00-Source\Util\yrl.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Util.Core\Util.Core.csproj">
+      <Project>{3598b7c6-fb59-4348-9c95-66fb48fff380}</Project>
+      <Name>Util.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="00-Source\bugs.txt" />
+    <Content Include="00-Source\exceptions.txt" />
+    <Content Include="00-Source\gdi-bugs.txt" />
+    <Content Include="00-Source\license.txt" />
+    <Content Include="00-Source\plugin-notes.txt" />
+    <Content Include="00-Source\Resizing\UnitR.cs.txt" />
+    <Content Include="00-Source\todo.txt" />
+    <Content Include="00-Source\totest.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

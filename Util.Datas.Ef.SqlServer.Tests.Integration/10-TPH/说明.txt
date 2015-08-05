@@ -1,0 +1,11 @@
+﻿TPH技巧
+1. 基类不需要是抽象类
+2. 如果不指定鉴别列，则EF自动创建名为 Discriminator 的列，并写入类名，用来区分不同子类（db first方式请手工在表中添加Discriminator列，类型为 nvarchar(128) ）
+3. 如果指定的鉴别属性不在领域实体上，则EF设置为指定名称Discriminator。
+4. 如果指定的鉴别属性在领域实体上，鉴别属性必须取消映射（手工调用Ignore或[NotMapped]）
+5. 通过Map<>泛型类调用Requires和HasValue映射鉴别属性
+6. 基类不映射鉴别属性。
+7. 范例
+ToTable( "Resources", "Systems" );
+Map<Module>( t => t.Requires( "Type" ).HasValue( 1 ) );
+Map<Operation>( t => t.Requires( "Type" ).HasValue( 2 ) );

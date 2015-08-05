@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DAB3F79D-EDFD-4D3D-98B1-89AF96FCE8BA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Util.Webs.Ext</RootNamespace>
+    <AssemblyName>Util.Webs.Ext</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\..\..\Release\Util.Webs.Ext.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\..\..\Release\Util.Webs.Ext.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\..\..\Snk\Util.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configs\TextBoxConfig.cs" />
+    <Compile Include="Controls\BoxComponents\BoxComponent.cs" />
+    <Compile Include="Controls\Buttons\Button.cs" />
+    <Compile Include="Controls\Buttons\Button`.cs" />
+    <Compile Include="Controls\ComponentBase.cs" />
+    <Compile Include="Controls\ContainerBase.cs" />
+    <Compile Include="Controls\Forms\ComboBox.cs" />
+    <Compile Include="Controls\Forms\EntityComboBox.cs" />
+    <Compile Include="Controls\Forms\EntityForm.cs" />
+    <Compile Include="Controls\Forms\EntityTextArea.cs" />
+    <Compile Include="Controls\Forms\EntityTextBox.cs" />
+    <Compile Include="Controls\Forms\TextArea.cs" />
+    <Compile Include="Controls\Forms\TextBox.cs" />
+    <Compile Include="Controls\Forms\TextBox`.cs" />
+    <Compile Include="Controls\IComponent.cs" />
+    <Compile Include="Controls\IComponent`.cs" />
+    <Compile Include="Controls\IContainer.cs" />
+    <Compile Include="Controls\Panels\Panel.cs" />
+    <Compile Include="Controls\Panels\Panel`.cs" />
+    <Compile Include="Controls\TabPanels\TabPanel.cs" />
+    <Compile Include="Controls\Toolbars\ToolbarFill.cs" />
+    <Compile Include="Controls\Toolbars\ToolbarHtml.cs" />
+    <Compile Include="Controls\Toolbars\ToolbarSeparator.cs" />
+    <Compile Include="Controls\Viewports\Viewport.cs" />
+    <Compile Include="Controls\Windows\Window.cs" />
+    <Compile Include="Configs\BoxComponentConfig.cs" />
+    <Compile Include="Configs\ButtonConfig.cs" />
+    <Compile Include="Configs\TabPanelConfig.cs" />
+    <Compile Include="Configs\ToolbarConfig.cs" />
+    <Compile Include="Configs\WindowConfig.cs" />
+    <Compile Include="Core\Function.cs" />
+    <Compile Include="Core\IFunction.cs" />
+    <Compile Include="Core\NullFunction.cs" />
+    <Compile Include="HtmlHelperExtentions.cs" />
+    <Compile Include="Factories\ExtFactory`.cs" />
+    <Compile Include="IBoxComponent.cs" />
+    <Compile Include="IButton.cs" />
+    <Compile Include="IButton`.cs" />
+    <Compile Include="IComboBox.cs" />
+    <Compile Include="IExtFactory`.cs" />
+    <Compile Include="IPanel.cs" />
+    <Compile Include="IPanel`.cs" />
+    <Compile Include="ITabPanel.cs" />
+    <Compile Include="ITextArea.cs" />
+    <Compile Include="ITextBox.cs" />
+    <Compile Include="ITextBox`.cs" />
+    <Compile Include="IWindow.cs" />
+    <Compile Include="Layout.cs" />
+    <Compile Include="Configs\ComponentConfigBase.cs" />
+    <Compile Include="Configs\ContainerConfigBase.cs" />
+    <Compile Include="Configs\IConfig.cs" />
+    <Compile Include="Configs\ConfigBase.cs" />
+    <Compile Include="Configs\PanelConfig.cs" />
+    <Compile Include="Configs\ViewportConfig.cs" />
+    <Compile Include="Region.cs" />
+    <Compile Include="Renders\IRender.cs" />
+    <Compile Include="Renders\TagRender.cs" />
+    <Compile Include="Renders\XTypeRender.cs" />
+    <Compile Include="Renders\ToolbarTagRender.cs" />
+    <Compile Include="Renders\ToolbarXTypeRender.cs" />
+    <Compile Include="Services\Contracts\IMessageBoxService.cs" />
+    <Compile Include="Services\Contracts\IProgressBarService.cs" />
+    <Compile Include="Services\Contracts\IToolbarService.cs" />
+    <Compile Include="Factories\ExtFactory.cs" />
+    <Compile Include="IExtFactory.cs" />
+    <Compile Include="Services\Impl\ExtService.cs" />
+    <Compile Include="Services\Impl\ExtService.MessageBox.cs" />
+    <Compile Include="IExtService.cs" />
+    <Compile Include="Services\Impl\ExtService.ProgressBar.cs" />
+    <Compile Include="Services\Impl\ExtService.Toolbar.cs" />
+    <Compile Include="IViewport.cs" />
+    <Compile Include="MessageBoxIcon.cs" />
+    <Compile Include="MessageBoxButtonType.cs" />
+    <Compile Include="Message.cs" />
+    <Compile Include="IMessageBox.cs" />
+    <Compile Include="Controls\MessageBoxs\MessageBox.cs" />
+    <Compile Include="Configs\MessageConfig.cs" />
+    <Compile Include="MessageBoxButton.cs" />
+    <Compile Include="IProgressBar.cs" />
+    <Compile Include="Controls\ProgressBars\ProgressBar.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="IToolbar.cs" />
+    <Compile Include="IToolbarButton.cs" />
+    <Compile Include="IToolbarItem.cs" />
+    <Compile Include="Configs\ToolbarButtonConfig.cs" />
+    <Compile Include="Controls\Toolbars\Toolbar.cs" />
+    <Compile Include="Controls\Toolbars\ToolbarButton.cs" />
+    <Compile Include="TabPosition.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Util.Core\Util.Core.csproj">
+      <Project>{3598b7c6-fb59-4348-9c95-66fb48fff380}</Project>
+      <Name>Util.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Util.Json\Util.Json.csproj">
+      <Project>{eeea67f9-9089-481d-a4dc-0966dec9fd7d}</Project>
+      <Name>Util.Json</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Util.Webs.Mvc\Util.Webs.Mvc.csproj">
+      <Project>{dcc52cfa-4c7f-4bd6-9df3-3cdf218e11cb}</Project>
+      <Name>Util.Webs.Mvc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Util.Webs\Util.Webs.csproj">
+      <Project>{e900666e-35d9-4bce-9335-16e34458fd92}</Project>
+      <Name>Util.Webs</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
